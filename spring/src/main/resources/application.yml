@@ -1,0 +1,22 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: product-rabbit
+  data:
+    mongodb:
+      auto-index-creation: true
+      uri: mongodb://localhost:27017/product-rabbit
+  rabbitmq:
+    host: jaragua-01.lmq.cloudamqp.com
+    port: 5671
+    username: kegxjddm
+    password: zwUtIQyBn1odwOvTKSRFc9mxG2nSwht5
+    virtual-host: kegxjddm
+    ssl:
+      enabled: true
+
+event:
+  atualizar-venda:
+    exchange: atualizar-venda-exchange
+    queue: atualizar-venda-queue
